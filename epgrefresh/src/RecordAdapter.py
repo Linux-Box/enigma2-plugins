@@ -14,9 +14,11 @@ from . import _, STARTNOTIFICATIONID, NOTIFICATIONDOMAIN
 class RecordAdapter:
 	backgroundCapable = True
 	def __init__(self, session):
-		if SystemInfo.get("NumVideoDecoders", 1) < 2:
-			self.backgroundRefreshAvailable = False
-			return
+		# we need a different check here. Fake recording is possible if 2 tuners exists (configured identically). I modified plugin.py to distinguish different config options if PIP is available.
+		# as this is the record adapter, we should not check for PIP but available tuners instead.
+		#if SystemInfo.get("NumVideoDecoders", 1) < 2:
+		#	self.backgroundRefreshAvailable = False
+		#	return
 
 		self.backgroundRefreshAvailable = True
 		self.__service = None

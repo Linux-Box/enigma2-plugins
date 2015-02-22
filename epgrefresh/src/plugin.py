@@ -6,6 +6,7 @@ from . import _, NOTIFICATIONDOMAIN
 # Config
 from Components.config import config, ConfigYesNo, ConfigNumber, ConfigSelection, \
 	ConfigSubsection, ConfigClock, ConfigYesNo, ConfigInteger, NoSave
+from Components.SystemInfo import SystemInfo
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 from Tools.BoundFunction import boundFunction
@@ -52,13 +53,22 @@ config.plugins.epgrefresh.parse_autotimer = ConfigSelection(choices = [
 		("ask_no", _("Ask default No")),
 	], default = "never"
 )
-config.plugins.epgrefresh.adapter = ConfigSelection(choices = [
-		("main", _("Main Picture")),
-		("pip", _("Picture in Picture")),
-		("pip_hidden", _("Picture in Picture (hidden)")),
-		("record", _("Fake recording")),
-	], default = "main"
-)
+# Fake recording is possible if 2 tuners exists (configured identically). Not only if 2 video adapters are available - that checks only for PIP.
+if SystemInfo.get("NumVideoDecoders", 1) > 1:
+	config.plugins.epgrefresh.adapter = ConfigSelection(choices = [
+			("main", _("Main Picture")),
+			("pip", _("Picture in Picture")),
+			("pip_hidden", _("Picture in Picture (hidden)")),
+			("record", _("Fake recording")),
+		], default = "main"
+	)
+else:
+	config.plugins.epgrefresh.adapter = ConfigSelection(choices = [
+			("main", _("Main Picture")),
+			("record", _("Fake recording")),
+		], default = "main"
+	)
+
 config.plugins.epgrefresh.show_in_extensionsmenu = ConfigYesNo(default = False)
 config.plugins.epgrefresh.show_run_in_extensionsmenu = ConfigYesNo(default = True)
 config.plugins.epgrefresh.show_help = ConfigYesNo(default = True)
