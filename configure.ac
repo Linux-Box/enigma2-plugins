@@ -520,7 +520,6 @@ movietagger/src/Makefile
 
 mphelp/Makefile
 mphelp/meta/Makefile
-mphelp/po/Makefile
 mphelp/src/Makefile
 
 multirc/Makefile
