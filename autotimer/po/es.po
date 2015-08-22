@@ -5,18 +5,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enigma2-plugins 1.0\n"
+"Project-Id-Version: enigma2-Autotimer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-10 18:11+0100\n"
-"PO-Revision-Date: 2015-05-25 20:12+0100\n"
-"Last-Translator: José Juan Zapater <josej@zapater.fdns.net>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2015-08-22 19:04+0100\n"
+"Last-Translator: VillaK\n"
+"Language-Team: Openplus\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #: AutoTimerEditor.py:20
 msgid "Monday"
@@ -236,7 +236,8 @@ msgstr ""
 #: AutoTimerEditor.py:386
 msgid ""
 "This is what will be looked for in event titles. Note that looking for e.g. "
-"german umlauts can be tricky as you have to know the encoding the channel uses."
+"german umlauts can be tricky as you have to know the encoding the channel "
+"uses."
 msgstr ""
 "Esto es lo que se buscó en los títulos del evento. Tenga en cuenta que en "
 "busca por ejemplo, alemán diéresis puede ser complicado ya que tienes que "
@@ -247,14 +248,14 @@ msgid ""
 "Encoding the channel uses for it's EPG data. You only need to change this if "
 "you're searching for special characters like the german umlauts."
 msgstr ""
-"Codifica el canal utiliza por sus datos de EPG. Sólo tiene que cambiar esto si "
-"estás en busca de caracteres especiales como las diéresis alemanas."
+"Codifica el canal utiliza por sus datos de EPG. Sólo tiene que cambiar esto "
+"si estás en busca de caracteres especiales como las diéresis alemanas."
 
 #: AutoTimerEditor.py:388
 msgid ""
-"Select \"exact match\" to enforce \"Match title\" to match exactly, \"partial "
-"match\" if you only want to search for a part of the event title or "
-"\"description match\" if you only want to search for a part of the event "
+"Select \"exact match\" to enforce \"Match title\" to match exactly, "
+"\"partial match\" if you only want to search for a part of the event title "
+"or \"description match\" if you only want to search for a part of the event "
 "description"
 msgstr ""
 "Seleccione\"coincidencia exacta\"para hacer cumplir\"coincidencia titulo"
@@ -292,16 +293,16 @@ msgstr "el autotimer estar restringido a un intervalo de tiempo?"
 
 #: AutoTimerEditor.py:394
 msgid ""
-"Lower bound of timespan. Nothing before this time will be matched. Offsets are "
-"not taken into account!"
+"Lower bound of timespan. Nothing before this time will be matched. Offsets "
+"are not taken into account!"
 msgstr ""
 "Límite inferior del intervalo de tiempo. Nada antes de este tiempo será "
 "igualado. Las compensaciones no se tienen en cuenta!"
 
 #: AutoTimerEditor.py:395
 msgid ""
-"Upper bound of timespan. Nothing after this time will be matched. Offsets are "
-"not taken into account!"
+"Upper bound of timespan. Nothing after this time will be matched. Offsets "
+"are not taken into account!"
 msgstr ""
 "Límite superior del intervalo de tiempo. Nada después de este tiempo será "
 "igualado. Las compensaciones no se tienen en cuenta!"
@@ -319,15 +320,16 @@ msgid ""
 "First day to match events. No event that begins before this date will be "
 "matched."
 msgstr ""
-"Primer día para que coincida con los eventos. Ningún evento que comienza antes "
-"de esta fecha será igualado."
+"Primer día para que coincida con los eventos. Ningún evento que comienza "
+"antes de esta fecha será igualado."
 
 #: AutoTimerEditor.py:398
 msgid ""
-"Last day to match events. Events have to begin before this date to be matched."
+"Last day to match events. Events have to begin before this date to be "
+"matched."
 msgstr ""
-"Último día para que coincida con los eventos. Los Eventos tienen que comenzar "
-"antes de esta fecha, que se ajustará."
+"Último día para que coincida con los eventos. Los Eventos tienen que "
+"comenzar antes de esta fecha, que se ajustará."
 
 #: AutoTimerEditor.py:399
 msgid "Change default recording offset?"
@@ -352,8 +354,8 @@ msgid ""
 "Maximum event duration to match. If an event is longer than this amount of "
 "time (without offset) it won't be matched."
 msgstr ""
-"Duración de acontecimiento máximo . Si un acontecimiento es más largo que esta "
-"cantidad de tiempo (sin la compensación) no será emparejado."
+"Duración de acontecimiento máximo . Si un acontecimiento es más largo que "
+"esta cantidad de tiempo (sin la compensación) no será emparejado."
 
 #: AutoTimerEditor.py:404
 msgid ""
@@ -391,7 +393,8 @@ msgid "Number of scheduled recordings left."
 msgstr "Número de grabaciones programadas a la izquierda"
 
 #: AutoTimerEditor.py:410
-msgid "The counter can automatically be reset to the limit at certain intervals."
+msgid ""
+"The counter can automatically be reset to the limit at certain intervals."
 msgstr ""
 "El contador puede establecerse automáticamente en el límite con cierta "
 "frecuencia."
@@ -402,19 +405,20 @@ msgid ""
 "timer with the same description already exists in the timer list."
 msgstr ""
 "Cuando esta opción está habilitada la autotimer no coincidirá con eventos "
-"donde otro temporizador con la misma descripción que ya existe en la lista de "
-"temporizador."
+"donde otro temporizador con la misma descripción que ya existe en la lista "
+"de temporizador."
 
 #: AutoTimerEditor.py:412
 msgid ""
-"Defines where to search for duplicates (only title, short description or even "
-"extended description)"
+"Defines where to search for duplicates (only title, short description or "
+"even extended description)"
 msgstr ""
 "Define dónde buscar duplicados (sólo título, descripción corta o descripción "
 "incluso ampliado)"
 
 #: AutoTimerEditor.py:413
-msgid "Should timers created by this AutoTimer be recorded to a custom location?"
+msgid ""
+"Should timers created by this AutoTimer be recorded to a custom location?"
 msgstr ""
 "En caso de temporizadores creados por este autotimer se grabaran en una "
 "ubicación personalizada?"
@@ -445,7 +449,7 @@ msgstr "Utilice la tecla amarilla para editar filtros."
 
 #: AutoTimerEditor.py:425 AutoTimerImporter.py:78 AutoTimerWizard.py:53
 msgid "Enabled"
-msgstr "habilitado"
+msgstr "Habilitado"
 
 #: AutoTimerEditor.py:425 AutoTimerWizard.py:54
 msgid "Description"
@@ -453,7 +457,7 @@ msgstr "Descripcion"
 
 #: AutoTimerEditor.py:425 AutoTimerWizard.py:55
 msgid "Match title"
-msgstr "Titulo acontecimiento"
+msgstr "Titulo Autotimer"
 
 #: AutoTimerEditor.py:426
 msgid "EPG encoding"
@@ -593,7 +597,8 @@ msgstr "Restricción a determinados ramos (editar en el menú de servicios)"
 
 #: AutoTimerEditor.py:473
 msgid "Restriction to certain days of week (edit in filter menu)"
-msgstr "Restricción para ciertos días de la semana (editar en el menú de filtro)"
+msgstr ""
+"Restricción para ciertos días de la semana (editar en el menú de filtro)"
 
 #: AutoTimerEditor.py:474
 msgid "Other filters (edit in filter menu)"
@@ -819,17 +824,24 @@ msgid "AutoTimer"
 msgstr "Autotimer"
 
 #: AutoTimerOverview.py:119
-#, python-format
 msgid "Do you really want to delete %s?"
-msgstr "De verdad quiere eliminar%s?"
+msgstr "De verdad quiere eliminar %s?"
+
+#: ../src/AutoTimerOverview.py:186
+msgid ""
+"Message\n"
+"Do you really want to delete %s?"
+msgstr ""
+"Mensaje\n"
+"De verdad quiere eliminar  %s?"
 
 #: AutoTimerOverview.py:142
 msgid "Preview"
-msgstr "previsualizar"
+msgstr "Previsualizar"
 
 #: AutoTimerOverview.py:143
 msgid "Import existing Timer"
-msgstr "Importar timer existente"
+msgstr "Importar desde grabacion existente"
 
 #: AutoTimerOverview.py:144
 msgid "Import from EPG"
@@ -841,7 +853,7 @@ msgstr "Configuración"
 
 #: AutoTimerOverview.py:146
 msgid "Edit new timer defaults"
-msgstr "Editar nuevos tiempos por defecto"
+msgstr "Ajustar Autotimers por defecto"
 
 #: AutoTimerOverview.py:149
 msgid "Help"
@@ -853,15 +865,15 @@ msgstr "Preguntas más frecuentes"
 
 #: AutoTimerOverview.py:152
 msgid "Create a new timer using the classic editor"
-msgstr "Crear nuevo tiempo usando editor clasico"
+msgstr "Crear AutoTimer usando editor clasico"
 
 #: AutoTimerOverview.py:154
 msgid "Create a new timer using the wizard"
-msgstr "Crear nuevo tiempo usando wizard"
+msgstr "Crear AutoTimer usando asistente"
 
 #: AutoTimerOverview.py:155
 msgid "AutoTimer Context Menu"
-msgstr "Menu Contexto Autotimer"
+msgstr "Menu Autotimer"
 
 #: AutoTimerPreview.py:20
 msgid "mins"
@@ -978,7 +990,8 @@ msgstr "Busqueda automatica"
 #: AutoTimerSettings.py:19
 msgid ""
 "Unless this is enabled AutoTimer will NOT automatically look for events "
-"matching your AutoTimers but only when you leave the GUI with the green button."
+"matching your AutoTimers but only when you leave the GUI with the green "
+"button."
 msgstr ""
 "A menos que esto se habilita autotimer NO buscará automáticamente evento! "
 "AutoTimers  sólo cuando salga de la interfaz gráfica de usuario con el botón "
@@ -1002,8 +1015,8 @@ msgstr "Demora de inicio (en min)"
 
 #: AutoTimerSettings.py:21
 msgid ""
-"This is the delay in minutes that the AutoTimer will wait on initial launch to "
-"not delay enigma2 startup time."
+"This is the delay in minutes that the AutoTimer will wait on initial launch "
+"to not delay enigma2 startup time."
 msgstr ""
 "Este es el retraso en minutos que el autotimer esperará en el lanzamiento "
 "inicial de no retrasar el tiempo de inicio enigma2."
@@ -1026,11 +1039,11 @@ msgstr "Sólo añadir temporizador para los próximos x días"
 
 #: AutoTimerSettings.py:23
 msgid ""
-"You can control for how many days in the future timers are added. Set this to "
-"0 to disable this feature."
+"You can control for how many days in the future timers are added. Set this "
+"to 0 to disable this feature."
 msgstr ""
-"Usted puede controlar cuántos días en un futuro los temporizadores se añaden. "
-"Póngalo a 0 para desactivar esta función."
+"Usted puede controlar cuántos días en un futuro los temporizadores se "
+"añaden. Póngalo a 0 para desactivar esta función."
 
 #: AutoTimerSettings.py:24
 msgid "Show in plugin browser"
@@ -1038,8 +1051,8 @@ msgstr "Mostrar en el navegador plugin"
 
 #: AutoTimerSettings.py:24
 msgid ""
-"Enable this to be able to access the AutoTimer Overview from within the plugin "
-"browser."
+"Enable this to be able to access the AutoTimer Overview from within the "
+"plugin browser."
 msgstr ""
 "Activar esto para poder acceder a la autotimer general desde el navegador "
 "plugin."
@@ -1063,12 +1076,12 @@ msgstr "Modificar temporizadores existentes"
 #: AutoTimerSettings.py:26
 msgid "This setting controls the behavior when a timer matches a found event."
 msgstr ""
-"Esta configuración controla el comportamiento cuando un temporizador coincide "
-"con un evento encontrado."
+"Esta configuración controla el comportamiento cuando un temporizador "
+"coincide con un evento encontrado."
 
 #: AutoTimerSettings.py:27
 msgid "Guess existing timer based on begin/end"
-msgstr "Adivina el temporizador existente basada en comenzar / finalizar"
+msgstr "Adivina el temporizador existente basado en principio/fin"
 
 #: AutoTimerSettings.py:27
 #, python-format
@@ -1097,9 +1110,9 @@ msgstr "Añadir temporizador como deshabilitado en conflicto"
 
 #: AutoTimerSettings.py:29
 msgid ""
-"This toggles the behavior on timer conflicts. If an AutoTimer matches an event "
-"that conflicts with an existing timer it will not ignore this event but add it "
-"disabled."
+"This toggles the behavior on timer conflicts. If an AutoTimer matches an "
+"event that conflicts with an existing timer it will not ignore this event "
+"but add it disabled."
 msgstr ""
 "Esto cambia el comportamiento en los conflictos del temporizador. Si un "
 "autotimer coincide con un evento que entra en conflicto con un temporizador "
@@ -1111,8 +1124,8 @@ msgstr "Incluir \"AutoTimer\" en etiquetas"
 
 #: AutoTimerSettings.py:30
 msgid ""
-"If this is selected, the tag \"AutoTimer\" will be given to timers created by "
-"this plugin."
+"If this is selected, the tag \"AutoTimer\" will be given to timers created "
+"by this plugin."
 msgstr ""
 "Si se selecciona esta opción, la etiqueta \"autotimer \" se dará a los "
 "temporizadores creados por este plugin."
@@ -1126,8 +1139,8 @@ msgid ""
 "If this is selected, the name of the respective AutoTimer will be added as a "
 "tag to timers created by this plugin."
 msgstr ""
-"Si se selecciona esta opción, se agregará el nombre de la respectiva autotimer "
-"como una etiqueta para temporizadores creados por este plugin."
+"Si se selecciona esta opción, se agregará el nombre de la respectiva "
+"autotimer como una etiqueta para temporizadores creados por este plugin."
 
 #: AutoTimerSettings.py:32
 msgid "Show notification on conflicts"
@@ -1163,8 +1176,8 @@ msgstr "editar nuevos Autotimers"
 
 #: AutoTimerSettings.py:34
 msgid ""
-"The editor to be used for new AutoTimers. This can either be the Wizard or the "
-"classic editor."
+"The editor to be used for new AutoTimers. This can either be the Wizard or "
+"the classic editor."
 msgstr ""
 "El editor que se utilizará para nuevos AutoTimers. Esto bien puede ser el "
 "asistente o el editor clásico."
@@ -1204,7 +1217,7 @@ msgstr "Todos los temporizadores no repetidos"
 
 #: __init__.py:12
 msgid "Classic"
-msgstr "Clasica"
+msgstr "Clasico"
 
 #: __init__.py:12
 msgid "Wizard"
@@ -1225,11 +1238,11 @@ msgstr "editar tiempo de busqueda en nuevos Eventos"
 
 #: plugin.py:148
 msgid "add AutoTimer"
-msgstr "añadir Auto Timer"
+msgstr "añadir AutoTimer"
 
 #: plugin.py:149
 msgid "add AutoTimer..."
-msgstr "añadir Auto Timer..."
+msgstr "añadir AutoTimer..."
 
 #: plugin.py:150
 msgid "Auto Timers"
@@ -1238,3 +1251,164 @@ msgstr "Auto Timers"
 #: plugin.py:160
 msgid "AutoTimers"
 msgstr "AutoTimers"
+
+msgid "Match Timespan: %02d:%02d - %02d:%02d"
+msgstr "Tiempo de intervalo: %02d:%02d - %02d:%02d"
+
+msgid "Only on Weekday: %s"
+msgstr "Sólo dia de la Semana: %s"
+
+msgid "Only on Service: %s"
+msgstr "Sólo en Canal: %s"
+
+msgid "Yes, and delete all timers generated by this autotimer"
+msgstr "Si, y borra todas programaciones generadas por este autotimer"
+
+msgid "Message"
+msgstr "Mensaje"
+
+msgid "Yes, but keep timers generated by this autotimer"
+msgstr "Sí, pero mantener programacion generada por este autotimer"
+
+#: ../src/autotimerwizard.xml
+msgid "Abort this Wizard."
+msgstr "Abortar Asistente"
+
+#: ../src/autotimerwizard.xml
+msgid "Create a new AutoTimer."
+msgstr "Crear nuevo AutoTimer"
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"Filters are another powerful tool when matching events. An AutoTimer can be "
+"restricted to certain Weekdays or only match an event with a text inside eg "
+"it's Description.\n"
+"Press BLUE to add a new restriction and YELLOW to remove the selected one."
+msgstr ""
+"Los filtros son una herramienta más potente cuando se emparejan eventos. Un "
+"autotimer puede restringirse a ciertos días de semana, o sólo coincide con "
+"un evento con un texto en el interior, por ejemplo es Descripción.\n"
+"Pulse AZUL para agregar una nueva restricción y AMARILLO para eliminar la "
+"seleccionada."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"It's possible to restrict an AutoTimer to certain Services or Bouquets or to "
+"deny specific ones.\n"
+"An Event will only match this AutoTimer if it's on a specific and not denied "
+"Service (inside a Bouquet).\n"
+"Press BLUE to add a new restriction and YELLOW to remove the selected one."
+msgstr ""
+"Es posible restringir un autotimer a determinados Canales o Bouquets o negar "
+"los específicos.\n"
+"Un evento sólo coincidirá este autotimer si está en un canal específico y no "
+"negado (dentro de un bouquet).\n"
+"Pulse AZUL para agregar una nueva restricción y AMARILLO para eliminar la "
+"seleccionada."
+
+#: ../src/autotimerwizard.xml
+msgid "No, remove them."
+msgstr "No, eliminarlos."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"Thank you for using the wizard. Your new AutoTimer has been added to the "
+"List.\n"
+"Please press OK to continue."
+msgstr ""
+"Gracias por utilizar el asistente. Su nuevo autotimer se ha añadido a la "
+"lista.\n"
+"Por favor, pulse Aceptar para continuar."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"The Timer will not be added to the List.\n"
+"Please press OK to close this Wizard."
+msgstr ""
+"El temporizador no se añadirá a la lista.\n"
+"Por favor, pulse Aceptar para cerrar este asistente."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"The Timespan of an AutoTimer is the first 'advanced' attribute. If a "
+"timespan is specified an event will only match this AutoTimer if it lies "
+"inside of this timespan."
+msgstr ""
+"El intervalo de tiempo de un autotimer es el primer atributo 'avanzado'. Si "
+"se especifica un intervalo de tiempo de un evento sólo coincidirá este "
+"autotimer si se encuentra dentro de este intervalo de tiempo."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"Welcome.\n"
+"\n"
+"This Wizard will help you to create a new AutoTimer by providing "
+"descriptions for common settings."
+msgstr ""
+"Bienvenido.\n"
+"\n"
+"Este asistente le ayudará a crear un nuevo autotimer proporcionando "
+"descripciones de ajustes comunes."
+
+#: ../src/autotimerwizard.xml
+msgid "Yes"
+msgstr "Si"
+
+#: ../src/autotimerwizard.xml
+msgid "Yes, keep them."
+msgstr "Sí, mantenga los."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"You can set the basic properties of an AutoTimer here.\n"
+"While 'Name' is just a human-readable name displayed in the Overview, 'Match "
+"in title' is what is looked for in the EPG."
+msgstr ""
+"Puede establecer las propiedades básicas de un autotimer aquí.\n"
+"'Descripción' es sólo un nombre legible que aparece en el menú, 'Titulo "
+"Autotimer' es lo que se busca en la EPG."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"You did not provide a valid 'Match in title' Attribute for your new "
+"AutoTimer.\n"
+"As this is a mandatory Attribute you cannot continue without doing so."
+msgstr ""
+"Usted no proporcionó un 'Titulo Autotimer' válido. para su nuevo autotimer.\n"
+"Como este es un atributo obligatorio no puede seguir sin hacerlo."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"You successfully configured a new AutoTimer. Do you want to add it to the "
+"list?\n"
+"\n"
+"You can go back a step by pressing EXIT on your remote."
+msgstr ""
+"Ha configurado con éxito un nuevo autotimer. ¿Quieres añadir a la lista?\n"
+"\n"
+"Usted puede volver un a un  paso anterior pulsando EXIT en el mando a "
+"distancia."
+
+#: ../src/autotimerwizard.xml
+msgid ""
+"Your 'Match in title' Attribute ends with a Whitespace.\n"
+"Please confirm if this was intentional, if not they will be removed."
+msgstr ""
+"Su 'Ajuste de título' Atributo termina con un espacio en blanco.\n"
+"Por favor confirmar si esto fue intencionado, si no van a ser retirados."
+
+#: ../src/faq.xml
+msgid "AutoTimer FAQ"
+msgstr "AutoTimer Preguntas Frecuentes"
+
+#: ../src/faq.xml
+msgid "AutoTimerFAQ"
+msgstr "AutoTimer Preguntas Frecuentes"
+
+#: ../src/mhelp.xml
+msgid "AutoTimerHelp"
+msgstr "Ayuda AutoTimer"
+
+#: ../src/mhelp.xml
+msgid "AutoTimer Help"
+msgstr "Ayuda AutoTimer"
