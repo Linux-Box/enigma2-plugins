@@ -21,7 +21,7 @@ from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 from Plugins.Plugin import PluginDescriptor
 
 class AutoTimerSettings(Screen, ConfigListScreen):
-	skin = """<screen name="AutoTimerSettings" position="center,center" size="565,370">
+	skin = """<screen name="AutoTimerSettings" title="AutoTimer Settings" position="center,center" size="565,370">
 		<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
 		<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
 		<widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />

@@ -4,6 +4,8 @@ from . import _, config
 
 # GUI (Screens)
 from Screens.MessageBox import MessageBox
+#from Tools.Notifications import AddPopup
+
 # Plugin
 from Components.PluginComponent import plugins
 from Plugins.Plugin import PluginDescriptor
@@ -195,4 +197,3 @@ def timermenu(menuid):
 	if menuid == "timermenu":
 		return [(_("AutoTimers"), main, "autotimer_setup", None)]
 	return []
-

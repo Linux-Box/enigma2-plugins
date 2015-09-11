@@ -172,13 +172,6 @@ class AutoTimerEditorBase:
 		# Match
 		self.match = NoSave(ConfigText(default = timer.match, fixed_size = False))
 
-		# Encoding
-		default = timer.encoding
-		selection = ['UTF-8', 'ISO8859-15']
-		if default not in selection:
-			selection.append(default)
-		self.encoding = NoSave(ConfigSelection(choices = selection, default = default))
-
 		# ...
 		self.searchType = NoSave(ConfigSelection(choices = [("partial", _("partial match")), ("exact", _("exact match")), ("start", _("title starts with")), ("description", _("description match"))], default = timer.searchType))
 		self.searchCase = NoSave(ConfigSelection(choices = [("sensitive", _("case-sensitive search")), ("insensitive", _("case-insensitive search"))], default = timer.searchCase))
@@ -352,6 +345,12 @@ class AutoTimerEditorBase:
 		# SeriesPlugin
 		self.series_labeling = NoSave(ConfigYesNo(default = timer.series_labeling))
 
+		# Filter info
+		self.isActive_services_value     = _("unknown")
+		self.isActive_bouquets_value     = _("unknown")
+		self.isActive_dayofweek_value    = _("unknown")
+		self.isActive_otherfilters_value = _("unknown")
+        
 	def pathSelected(self, res):
 		if res is not None:
 			# I'm pretty sure this will always fail
@@ -425,7 +424,6 @@ class AutoTimerEditor(Screen, ConfigListScreen, AutoTimerEditorBase):
 		self.series_labeling.addNotifier(self.reloadList, initial_call = False)
 
 		self.refresh()
-		self.initHelpTexts()
 
 		# XXX: no help for numericaltextinput since it is shown on top of our help
 		ConfigListScreen.__init__(self, self.list, on_change = self.changed)
@@ -467,12 +465,30 @@ class AutoTimerEditor(Screen, ConfigListScreen, AutoTimerEditorBase):
 			self["key_yellow"].text = _("Edit filters")
 		else:
 			self["key_yellow"].text = _("Add filters")
-
+		if self.excludes[0] or self.excludes[1] or self.excludes[2]  or self.includes[0] or self.includes[1] or self.includes[2]:
+			self.isActive_otherfilters_value = _("enabled")
+		else:
+			self.isActive_otherfilters_value = _("disabled")
+		if self.excludes[3] or self.includes[3]:
+			self.isActive_dayofweek_value = _("enabled")
+		else:
+			self.isActive_dayofweek_value = _("disabled")
+		self.reloadList(True)
+        
 	def renameServiceButton(self):
 		if self.serviceRestriction:
 			self["key_blue"].text = _("Edit services")
 		else:
 			self["key_blue"].text = _("Add services")
+		if self.services:
+			self.isActive_services_value = _("enabled")
+		else:
+			self.isActive_services_value = _("disabled")
+		if self.bouquets:
+			self.isActive_bouquets_value = _("enabled")
+		else:
+			self.isActive_bouquets_value = _("disabled")
+		self.reloadList(True)
 
 	def updateHelp(self):
 		cur = self["config"].getCurrent()
@@ -500,7 +516,6 @@ class AutoTimerEditor(Screen, ConfigListScreen, AutoTimerEditorBase):
 			self.enabled: _("Set this NO to disable this AutoTimer."),
 			self.name: _("This is a name you can give the AutoTimer. It will be shown in the Overview and the Preview."),
 			self.match: _("This is what will be looked for in event titles. Note that looking for e.g. german umlauts can be tricky as you have to know the encoding the channel uses."),
-			self.encoding: _("Encoding the channel uses for it's EPG data. You only need to change this if you're searching for special characters like the german umlauts."),
 			self.searchType: _("Select \"exact match\" to enforce \"Match title\" to match exactly, \"partial match\" if you only want to search for a part of the event title or \"description match\" if you only want to search for a part of the event description"),
 			self.searchCase: _("Select whether or not you want to enforce case correctness."),
 			self.justplay: _("Add zap timer instead of record timer?"),
@@ -530,6 +545,10 @@ class AutoTimerEditor(Screen, ConfigListScreen, AutoTimerEditorBase):
 			self.destination: _("Select the location to save the recording to."),
 			self.tags: _("Tags the Timer/Recording will have."),
 			self.series_labeling: _("Label Timers with season, episode and title, according to the SeriesPlugin settings."),
+			self.isActive_services: _("Use blue key to edit bouquets or services."),
+			self.isActive_bouquets: _("Use blue key to edit bouquets or services."),
+			self.isActive_dayofweek: _("Use yellow key to edit filters."),
+			self.isActive_otherfilters: _("Use yellow key to edit filters."),
 		}
 
 	def refresh(self):
@@ -543,7 +562,6 @@ class AutoTimerEditor(Screen, ConfigListScreen, AutoTimerEditorBase):
 			))
 
 		list.extend((
-			getConfigListEntry(_("EPG encoding"), self.encoding),
 			getConfigListEntry(_("Search type"), self.searchType),
 			getConfigListEntry(_("Search strictness"), self.searchCase),
 			getConfigListEntry(_("Timer type"), self.justplay),
@@ -627,7 +645,18 @@ class AutoTimerEditor(Screen, ConfigListScreen, AutoTimerEditorBase):
 		if hasSeriesPlugin:
 			list.append(getConfigListEntry(_("Label series"), self.series_labeling))
 
+		# Display short info on active filters in autotimer editor
+		self.isActive_services =     NoSave(ConfigSelection([("0", self.isActive_services_value)],     default="0"))
+		self.isActive_bouquets =     NoSave(ConfigSelection([("0", self.isActive_bouquets_value)],     default="0"))
+		self.isActive_dayofweek =    NoSave(ConfigSelection([("0", self.isActive_dayofweek_value)],    default="0"))
+		self.isActive_otherfilters = NoSave(ConfigSelection([("0", self.isActive_otherfilters_value)], default="0"))
+		list.append(getConfigListEntry(_("Restriction to certain services (edit in services menu)"), self.isActive_services))
+		list.append(getConfigListEntry(_("Restriction to certain bouquets (edit in services menu)"), self.isActive_bouquets))
+		list.append(getConfigListEntry(_("Restriction to certain days of week (edit in filter menu)"),   self.isActive_dayofweek))
+		list.append(getConfigListEntry(_("Other filters (edit in filter menu)"),                         self.isActive_otherfilters))
+
 		self.list = list
+		self.initHelpTexts()
 
 	def reloadList(self, value):
 		self.refresh()
@@ -741,9 +770,6 @@ class AutoTimerEditor(Screen, ConfigListScreen, AutoTimerEditorBase):
 
 		# Name
 		self.timer.name = self.name.value.strip() or self.timer.match
-
-		# Encoding
-		self.timer.encoding = self.encoding.value
 
 		# ...
 		self.timer.searchType = self.searchType.value
