@@ -11,7 +11,7 @@ from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 import os, gettext
-
+from boxbranding import getImageDistro
 ##############################################################################
 
 config.plugins.PermanentClock = ConfigSubsection()
@@ -89,7 +89,7 @@ class PermanentClockPositioner(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		self.skin = SKIN
-		
+
 		self["actions"] = ActionMap(["WizardActions", "DirectionActions"],
 		{
 			"left": self.left,
@@ -99,11 +99,11 @@ class PermanentClockPositioner(Screen):
 			"ok": self.ok,
 			"back": self.exit
 		}, -1)
-		
+
 		desktop = getDesktop(0)
 		self.desktopWidth = desktop.size().width()
 		self.desktopHeight = desktop.size().height()
-		
+
 		self.moveTimer = eTimer()
 		self.moveTimer.callback.append(self.movePosition)
 		self.moveTimer.start(50, 1)
@@ -198,8 +198,15 @@ def startConfig(session, **kwargs):
 	session.open(PermanentClockMenu)
 
 def main(menuid):
-	if menuid != "system": 
-		return [ ]
+	if getImageDistro() in ('openmips'):
+		if menuid != "general_menu":
+			return [ ]
+	elif getImageDistro() in ('openhdf'):
+		if menuid != "gui_menu":
+			return [ ]
+	else:
+		if menuid != "system":
+			return []
 	return [(_("Permanent Clock"), startConfig, "permanent_clock", None)]
 
 ##############################################################################

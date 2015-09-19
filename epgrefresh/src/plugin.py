@@ -9,6 +9,7 @@ from Components.config import config, ConfigYesNo, ConfigNumber, ConfigSelection
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 from Tools.BoundFunction import boundFunction
+from boxbranding import getImageDistro
 
 # Error-print
 from traceback import print_exc
@@ -18,11 +19,11 @@ from sys import stdout
 from time import time, localtime, mktime
 now = localtime()
 begin = mktime((
-	now.tm_year, now.tm_mon, now.tm_mday, 20, 15, \
+	now.tm_year, now.tm_mon, now.tm_mday, 07, 30, \
 	0, now.tm_wday, now.tm_yday, now.tm_isdst)
 )
 end = mktime((
-	now.tm_year, now.tm_mon, now.tm_mday, 06, 30, \
+	now.tm_year, now.tm_mon, now.tm_mday, 20, 00, \
 	0, now.tm_wday, now.tm_yday, now.tm_isdst)
 )
 
@@ -263,6 +264,14 @@ def housekeepingExtensionsmenu(configentry, force=False):
 config.plugins.epgrefresh.show_in_extensionsmenu.addNotifier(housekeepingExtensionsmenu, initial_call = False, immediate_feedback = True)
 config.plugins.epgrefresh.show_run_in_extensionsmenu.addNotifier(housekeepingExtensionsmenu, initial_call = False, immediate_feedback = True)
 
+def menu_main(menuid, **kwargs):
+	if getImageDistro() in ("openvix", "openatv"):
+		if menuid != "epg":
+			return []
+	else:
+		return []
+	return [(_("PLUGINNAME_EPGRefresh"), main, "epgrefresh", None)]
+
 def Plugins(**kwargs):
 	# NOTE: this might be a little odd to check this, but a user might expect
 	# the plugin to resume normal operation if installed during runtime, but
@@ -290,7 +299,7 @@ def Plugins(**kwargs):
 			needsRestart = needsRestart,
 		),
 		PluginDescriptor(
-			name = _("PLUGINNAME_EPGRefresh"),
+			name = _("EPGRefresh"),
 			description = _("Automatically refresh EPG"),
 			where = PluginDescriptor.WHERE_PLUGINMENU, 
 			fnc = main,
@@ -298,6 +307,12 @@ def Plugins(**kwargs):
 			needsRestart = needsRestart,
 		),
 	]
+	list.append(PluginDescriptor(name = _("EPGRefresh"),
+					description = _("Automatically refresh EPG"),
+					where = PluginDescriptor.WHERE_MENU,
+					fnc = menu_main))
+
+
 	if config.plugins.epgrefresh.show_in_extensionsmenu.value:
 		extSetupDescriptor.needsRestart = needsRestart
 		list.append(extSetupDescriptor)

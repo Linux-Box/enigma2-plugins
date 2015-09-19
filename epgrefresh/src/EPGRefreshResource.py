@@ -15,7 +15,7 @@ except ImportError as ie:
 	from urllib.parse import unquote
 	iteritems = lambda d: d.items()
 
-API_VERSION = "1.2"
+API_VERSION = "1.3"
 
 class EPGRefreshStartRefreshResource(resource.Resource):
 	def render(self, req):
@@ -226,7 +226,7 @@ class EPGRefreshChangeSettingsResource(resource.Resource):
 			elif key == "wakeup":
 				config.plugins.epgrefresh.wakeup.value = True if value == "true" else False
 			elif key == "parse_autotimer":
-				if value in epgrefresh.parse_autotimer.choices:
+				if value in config.plugins.epgrefresh.parse_autotimer.choices:
 					config.plugins.epgrefresh.parse_autotimer.value = value
 			elif key == "adapter":
 				if value in config.plugins.epgrefresh.adapter.choices:

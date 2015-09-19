@@ -17,6 +17,8 @@ except:
 	from Plugins.SystemPlugins.Videomode.VideoHardware import video_hw # depends on Videomode Plugin
 from Components.Sources.Boolean import Boolean
 
+from boxbranding import getImageDistro
+
 # for localized messages
 from . import _
 
@@ -50,9 +52,12 @@ config.plugins.autoresolution.delay_switch_mode = ConfigSelection(default = "100
 
 def setDeinterlacer(mode):
 	print "[AutoRes] switch deinterlacer mode to %s" % mode
-	f = open('/proc/stb/vmpeg/deinterlace' , "w")
-	f.write("%s\n" % mode)
-	f.close()
+	try:
+		f = open('/proc/stb/vmpeg/deinterlace' , "w")
+		f.write("%s\n" % mode)
+		f.close()
+	except:
+		pass
 
 frqdic = { 23976: '24', \
 		24000: '24', \
@@ -224,9 +229,12 @@ class AutoRes(Screen):
 			mode = self.lastmode
 			if mode.find("p24") != -1 or mode.find("p25") != -1 or mode.find("p30") != -1:
 				print "[AutoRes] switching to", mode
-				v = open('/proc/stb/video/videomode' , "w")
-				v.write("%s\n" % mode)
-				v.close()
+				try:
+					v = open('/proc/stb/video/videomode' , "w")
+					v.write("%s\n" % mode)
+					v.close()
+				except:
+					pass
 				resolutionlabel["restxt"].setText("Videomode: %s" % mode)
 				if config.plugins.autoresolution.showinfo.value:
 					resolutionlabel.show()
@@ -369,8 +377,15 @@ def autostart(reason, **kwargs):
 		AutoRes(session)
 
 def startSetup(menuid):
-	if menuid != "system":
-		return [ ]
+	if getImageDistro() in ('openmips'):
+		if menuid != "video_menu":
+			return [ ]
+	elif getImageDistro() in ('openhdf'):
+		if menuid != "video_menu":
+			return [ ]
+	else:
+		if menuid != "system":
+			return [ ]
 	return [(_("Autoresolution"), autoresSetup, "autores_setup", 45)]
 
 def autoresSetup(session, **kwargs):
