@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: enigma2-Autotimer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-10 18:11+0100\n"
-"PO-Revision-Date: 2015-08-22 19:04+0100\n"
+"PO-Revision-Date: 2015-09-25 13:19+0100\n"
 "Last-Translator: VillaK\n"
 "Language-Team: Openplus\n"
 "Language: es\n"
@@ -453,7 +453,7 @@ msgstr "Habilitado"
 
 #: AutoTimerEditor.py:425 AutoTimerWizard.py:54
 msgid "Description"
-msgstr "Descripcion"
+msgstr "Descripción"
 
 #: AutoTimerEditor.py:425 AutoTimerWizard.py:55
 msgid "Match title"
@@ -461,7 +461,7 @@ msgstr "Titulo Autotimer"
 
 #: AutoTimerEditor.py:426
 msgid "EPG encoding"
-msgstr "codificacion EPG"
+msgstr "Codificacion EPG"
 
 #: AutoTimerEditor.py:427
 msgid "Search type"
@@ -473,7 +473,7 @@ msgstr "Exactitud de Busqueda"
 
 #: AutoTimerEditor.py:429 AutoTimerImporter.py:89 AutoTimerWizard.py:56
 msgid "Timer type"
-msgstr "Tipo de Tiempo"
+msgstr "Tipo de Autotimer"
 
 #: AutoTimerEditor.py:431
 msgid "Set End Time"
@@ -481,11 +481,11 @@ msgstr "Elige tiempo fin"
 
 #: AutoTimerEditor.py:432
 msgid "Use automatic selection of alternates."
-msgstr "usa seleccion automatica o alternativa"
+msgstr "Usa seleccion automatica o alternativa"
 
 #: AutoTimerEditor.py:432 AutoTimerWizard.py:47
 msgid "Only match during timespan"
-msgstr "solo acontecimiento durante intervalo de tiempo"
+msgstr "Solo acontecimiento durante intervalo de tiempo"
 
 #: AutoTimerEditor.py:434 AutoTimerWizard.py:49
 msgid "Begin of timespan"
@@ -529,7 +529,7 @@ msgstr "Duracion maxima (en m)"
 
 #: AutoTimerEditor.py:444 AutoTimerImporter.py:87
 msgid "After event"
-msgstr "después evento"
+msgstr "Después del evento"
 
 #: AutoTimerEditor.py:446
 msgid "Execute \"after event\" during timespan"
@@ -569,7 +569,7 @@ msgstr "Usar localizacion personalizada"
 
 #: AutoTimerEditor.py:459
 msgid "Custom location"
-msgstr "ubicación personalizada"
+msgstr "Ubicación personalizada"
 
 #: AutoTimerEditor.py:460 AutoTimerImporter.py:94
 msgid "Tags"
@@ -704,7 +704,7 @@ msgstr "Editando"
 
 #: AutoTimerEditor.py:930 AutoTimerEditor.py:971
 msgid "Record on"
-msgstr "Grabar on"
+msgstr "Grabar en"
 
 #: AutoTimerEditor.py:957
 msgid "Select channel to record on"
