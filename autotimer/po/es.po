@@ -784,7 +784,7 @@ msgid "Everyday"
 msgstr "Cada Día"
 
 #: AutoTimerList.py:191
-msgid "Any time"
+msgid "  Any time"
 msgstr "En cualquier momento"
 
 #: AutoTimerOverview.py:43
