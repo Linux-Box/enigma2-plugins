@@ -1,0 +1,199 @@
+# Spanish translations for enigma package.
+# Copyright (C) 2009 THE enigma'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the enigma package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Enigma 2 IMDb Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-25 12:54+0100\n"
+"PO-Revision-Date: 2016-02-03 19:09+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: Joan González - Jglez3 <joan@gonzalezcrego.es>\n"
+"Language-Team: OpenPlus <www.open-plus.es>"
+"Language: es\n"
+"X-Poedit-SearchPath-0: ../src\n"
+
+msgid " as "
+msgstr " como "
+
+msgid "* = Restart Required"
+msgstr "* = Reinicio obligatorio"
+
+msgid "Ambiguous results"
+msgstr "Resultados ambiguos"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Cast: "
+msgstr "Reparto: "
+
+msgid "Channel Selection"
+msgstr "Selección de canal"
+
+msgid "Content:"
+msgstr "Contenido:"
+
+msgid "Could't get Eventname"
+msgstr "Imposible obtener nombre de evento"
+
+msgid "Details"
+msgstr "Detalles"
+
+#, python-format
+msgid "Downloading Movie Poster: %s..."
+msgstr "Descargando cartel de película: %s…"
+
+msgid ""
+"Enable this to be able to access the IMDb from within the plugin browser."
+msgstr "Activa esto para poder acceder a IMDb desde Complementos."
+
+msgid "Enter search"
+msgstr "Introduce búsqueda"
+
+msgid "Enter text to search for"
+msgstr "Introduce el texto a buscar"
+
+msgid "Exit"
+msgstr "Salir"
+
+msgid "Extra Info"
+msgstr "Información adicional"
+
+msgid "Genre:"
+msgstr "Género:"
+
+msgid "IMDb Details"
+msgstr "Detalles IMDb"
+
+msgid "IMDb Details parsed"
+msgstr "Detalles de IMDb analizados"
+
+msgid "IMDb Download completed"
+msgstr "Descarga de IMDb completa"
+
+msgid "IMDb Download failed"
+msgstr "Descarga de IMDb fallida"
+
+msgid "IMDb Menu"
+msgstr "Menú IMDb"
+
+msgid "IMDb Plugin"
+msgstr "Complemento IMDb"
+
+msgid "IMDb Re-Download completed"
+msgstr "Re-descarga de IMDb completada"
+
+msgid "IMDb Save-Download completed"
+msgstr "Guardado-descarga de IMDB completado"
+
+msgid "IMDb Setup"
+msgstr "Configuración IMDb"
+
+msgid ""
+"IMDb can not get Movie Information, to\n"
+" write .jpg and .txt-file!"
+msgstr ""
+"IMDb no puede obtener información de la película\n"
+"para escribirla en un archivo .jpg y .txt."
+
+msgid ""
+"IMDb can not get Movie Information, to\n"
+" write .txt-file!"
+msgstr ""
+"IMDb no puede obtener información de la película\n"
+"para escribirla .txt."
+
+msgid "IMDb query failed!"
+msgstr "¡Consulta a IMDb fallida!"
+
+msgid "Lookup"
+msgstr "Búsqueda"
+
+msgid "No IMDb match."
+msgstr "No hay coincidencia en IMDb."
+
+msgid "No cast list found in the database."
+msgstr "No se ha encontrado el reparto en la base de datos."
+
+msgid "No details found."
+msgstr "No se encontraron detalles."
+
+msgid "no user rating yet"
+msgstr "aún no hay puntuación"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Play Trailer"
+msgstr "Reproducir trailer"
+
+msgid "Please select the matching entry"
+msgstr "Por favor, selecciona la entrada coincidente"
+
+msgid "Production Countries:"
+msgstr "Países de producción:"
+
+#, python-format
+msgid "Query IMDb: %s"
+msgstr "Consulta IMDb: %s"
+
+msgid "Query details from the Internet Movie Database"
+msgstr "Detalles de la consulta desde IMDb"
+
+#, python-format
+msgid "Re-Query IMDb: %s..."
+msgstr "Reconsulta IMDb: %s…"
+
+msgid "Release Date:"
+msgstr "Fecha de emisión:"
+
+msgid "Runtime:"
+msgstr "Tiempo de ejecución:"
+
+msgid "Save current Details as .html for offline using"
+msgstr "Guardar detalles actuales como .html para usar sin conexión"
+
+msgid "Save current Details as .txt"
+msgstr "Guardar detalles actuales como .txt"
+
+msgid "Save current Poster and Details as .txt"
+msgstr "Guardar el cartel actual y los detalles como .txt"
+
+msgid "Search Trailer"
+msgstr "Buscar trailer"
+
+msgid "Select from EPG"
+msgstr "Seleccionar desde EPG"
+
+msgid "Setup"
+msgstr "Configuración"
+
+msgid "Show in plugin browser"
+msgstr "Mostrar lista de complementos"
+
+msgid "The Internet Movie Database"
+msgstr ""
+
+msgid ""
+"This option allows you add words/phrases for IMDb to ignore when searching. "
+"please seperaate with a comma"
+msgstr ""
+"Esta opción te permite añadir palabras/frases para que IMDb las ignore en "
+"sus búsquedas. Sepáralas con una coma."
+
+msgid "Title Menu"
+msgstr "Lista películas"
+
+msgid "User Rating"
+msgstr "Puntuación"
+
+msgid "Words / phrases to ignore "
+msgstr "Palabras / frases a ignorar "
